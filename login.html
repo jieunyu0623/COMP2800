@@ -28,6 +28,9 @@
     <!----------------------->
 
     <h1>The login page</h1>
+    <!-----------Firebase UI Account Set-Up-->
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -40,7 +43,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src = "firebase_api.js"> </script>
+    <script src = "scripts/firebase_api.js"> </script>
     <script>
         // This snippet goes at the JS section at the end of the body tag in "login.html"
         // After firebase libraries via CDN are sourced
@@ -74,10 +77,9 @@
                         db.collection("Users").doc(user.uid).set({
                                 name: user.displayName,
                                 email: user.email,
-                                calories: 0
                             }).then(function () {
                                 console.log("New user added to firestore");
-                                window.location.assign("index.html");
+                                window.location.assign("mainpage.html");
                             })
                             .catch(function (error) {
                                 console.log("Error adding new user: " + error);
@@ -95,7 +97,7 @@
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: 'index.html',
+            signInSuccessUrl: 'mainpage.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -106,9 +108,9 @@
                 //firebase.auth.PhoneAuthProvider.PROVIDER_ID
             ],
             // Terms of service url.
-            tosUrl: 'index.html',
+            tosUrl: 'mainpage.html',
             // Privacy policy url.
-            privacyPolicyUrl: 'index.html',
+            privacyPolicyUrl: 'mainpage.html',
             accountChooserEnabled: false
         };
         // The start method will wait until the DOM is loaded.
