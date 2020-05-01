@@ -1,2 +1,2 @@
 This is my readme file.
-This is the master branch, only finished products are allowed here.
+This is the dev branch, products are to be merged here.
