@@ -7,11 +7,11 @@ function getName() {
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("Users").doc(user.uid)
             .onSnapshot(function (snap) {
-                document.getElementById("user_name").innerHTML = snap.data().name;
+                let x = snap.data().name;
             });
     });
 }
-const name = getName();
+const name = prompt("Please insert name");
 appendMessage('You joined');
 socket.emit('new-user', name);
 
