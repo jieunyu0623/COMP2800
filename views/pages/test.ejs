@@ -17,12 +17,6 @@
     <input type="submit" value="Add" id="add">
 </form>
 <script type="text/javascript" charset="utf-8">
-    $(document).ready(function(){
-        $('#add').on('click', function(){
-            let item = $('#todolist').val();
-            data.push(item);
-        })
-    })
     let padding = {top:20, right:40, bottom:0, left:0},
         w = 500 - padding.left - padding.right,
         h = 500 - padding.top  - padding.bottom,
@@ -34,36 +28,30 @@
         color = d3.scale.category20(); //latest version: d3.scaleOrdinal(d3.schemePastel1);
         randomNumbers = getRandomNumbers();
     let data = [
-                {"label":"haha",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
-                {"label":"IMAC PRO",  "value":1,  "question":"What CSS property is used for changing the font?"}, //font-family
-                {"label":"SUZUKI",  "value":1,  "question":"What CSS property is used for changing the color of text?"}, //color
-                {"label":"HONDA",  "value":1,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
-                {"label":"FERRARI",  "value":1,  "question":"What CSS property is used for changing the size of text?"}, //font-size
-                {"label":"APARTMENT",  "value":1,  "question":"What CSS property is used for changing the background color of a box?"}, //background-color
-                {"label":"IPAD PRO",  "value":1,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
-                {"label":"LAND",  "value":1,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
-                {"label":"MOTOROLLA",  "value":1,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
-                {"label":"BMW", "value":1, "question":"With CSS selectors, what character prefix should one use to specify a class?"}, //period
-                {"label":"RANGE ROVER", "value":1, "question":"With CSS selectors, what character prefix should one use to specify an ID?"}, //pound sign
-                {"label":"FREE VISA", "value":1, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
-                {"label":"HOTEL TICKET", "value":1, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
-                {"label":"PLANE", "value":1, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
-                {"label":"HOME", "value":1, "question":"What CSS property is used for specifying the area outside a box?"}, //margin
-                {"label":"MAC BOOK", "value":1, "question":"What type of bracket is used for HTML tags?"}, //< >
-                {"label":"SAMSUNG GALAXY 7", "value":1, "question":"What type of bracket is used for CSS rules?"}, // { }
-                {"label":"NOTE BOOK", "value":1, "question":"Which HTML tag is used for specifying a paragraph?"}, //<p>
-                {"label":"20,0000,0000$", "value":1, "question":"What should always be the very first line of code in your HTML?"}, //<!DOCTYPE html>
-                {"label":"HOTEL TICKET", "value":1, "question":"What HTML tag holds all of the metadata tags for your page?"}, //<head>
-                {"label":"SAMSUNG TV", "value":1, "question":"In CSS, what character separates a property from a value?"}, // colon
-                {"label":"LG  HD TV", "value":1, "question":"What HTML tag holds all of your CSS code?"}, // <style>
-                {"label":"FREE FURNITURE", "value":1, "question":"What file extension should you use for your web pages?"}, // .html
-                {"label":"FREE ADMISSION MIT", "value":1, "question":"Which coding language is used for marking up content and structure on a web page?"}, // HTML
-                {"label":"OPPO CAMERA PHONE", "value":1, "question":"Which coding language is used for specifying the design of a web page?"}, // CSS
-                {"label":"SAMSUNG NOTE5", "value":1, "question":"Which coding language is used for adding functionality to a web page?"}, // JavaScript
-                {"label":"HP DESKTOP", "value":1, "question":"What CSS property is used for making the edges of a box visible?"}, // border
-                {"label":"15,000,000$", "value":1, "question":"What character symbol is used at the end of each CSS statement?"},//semi-colon
-                {"label":"BUGGATI", "value":1, "question":"By default, how wide is a <div> box?"}, //100%
-                {"label":" GOOGLE JOB", "value":1, "question":"What character symbol do I use to specify multiple CSS selectors in one code block?"} //comma
+                {"label":"item1"}, 
+                {"label":"item2"},
+                {"label":"item3"}, 
+                {"label":"item4"},
+                {"label":"item5"}, 
+                {"label":"item6"},
+                {"label":"item7"},
+                {"label":"item8"},
+                {"label":"item9"}, 
+                {"label":"item10"}, 
+                {"label":"item11"},
+                {"label":"item12"},
+                {"label":"item13"},
+                {"label":"item14"},
+                {"label":"item15"}, 
+                {"label":"item16"}, 
+                {"label":"item17"},
+                {"label":"item18"},
+                {"label":"item19"},
+                {"label":"item20"}, 
+                {"label":"item21"}, 
+                {"label":"item22"},
+                {"label":"item23"}, 
+                {"label":"item24"},
     ];
     var svg = d3.select('#chart')
         .append("svg")
@@ -179,9 +167,13 @@
         return array;
     }
 
-    function deleteItems(){
-        
-    }
+    $(document).ready(function(){
+        $('#add').on('click', function(){
+            let item = $('#todolist').val();
+            data.push(item);
+        })
+    })
+
 </script>
 
 </body>

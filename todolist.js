@@ -40,8 +40,8 @@ app.get("/add/:word/:score?", (req, res) => {
         }
     } else {
         tasks[task] = score;
-        var data = JSON.stringify(words, null, 2);
-        fs.writeFile('words.json', words, finished);
+        var data = JSON.stringify(tasks, null, 2);
+        fs.writeFile('words.json', tasks, finished);
 
         function finished(err) {
             console.log('all.set');
