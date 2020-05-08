@@ -2,16 +2,10 @@ const socket = io('http://localhost:3000')
 const msgContainer = document.getElementById('msg-container');
 const messageForm = document.getElementById('send-container');
 const messageInput = document.getElementById('message-input');
+getName();
+var name = localStorage.getItem("name")
 
-function getName() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        db.collection("Users").doc(user.uid)
-            .onSnapshot(function (snap) {
-                let x = snap.data().name;
-            });
-    });
-}
-const name = prompt("Please insert name");
+
 appendMessage('You joined');
 socket.emit('new-user', name);
 
@@ -40,3 +34,33 @@ function appendMessage(message) {
   messageElement.innerText = message;
   msgContainer.append(messageElement);
 }
+function getActivities() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("Users").doc(user.uid)
+            .onSnapshot(function (snap) {
+                data = snap.data().activities;
+            });
+    });
+}
+
+function getName() {
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        
+        db.collection("Users").doc(user.uid)
+            .onSnapshot(function (snap) {
+                x = snap.data().name;
+                console.log(x);
+               
+               localStorage.setItem("name",x);
+            });
+        
+      });
+}
+
+console.log("My names: " + localStorage.getItem("name"));
+
+
+
+
+
