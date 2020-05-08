@@ -4,24 +4,25 @@
     <meta charset="utf-8">
     <title>Spin the Wheel</title>
    
-    <meta name="author" content="BCIT">
+    <meta name="author" content="Team26">
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
     <!----------------------------------------------->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
     <!----------------------------------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-   
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" type="text/css" href="mainpage.css">
+    <script type="text/javascript" defer src="mainpage.js"></script>
  
 </head>
 <body>
@@ -29,15 +30,59 @@
     <!--  HTML Section -->
     <!----------------------->
 <a href="mainpage.html" class="title"><h1>Project Spin The Wheel</h1></a>
+<button class="loginbutton">Log In</button>
 <div id="mySidenav" class="sidenav">
-    <a href="#" id="about">About</a>
-    <a href="#" id="blog">Calender</a>
-    <a href="#" id="projects">My To-Do List</a>
-    <a href="#" id="contact">Feedback</a>
+    <a data-modal-target="#modal" id="about">About</a>
+    <a href="#" id="calendar">Calendar</a>
+    <a href="#" id="todo">My To-Do List</a>
+    <a href="#" id="feedback">Feedback</a>
   </div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">A b o u t  U s . . .</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        We are team 26 :) 
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <div>
+        <img id="wheel" src="images/wheel.gif"> 
+    </div>
+    <div id="todolist">
+        <form>
+            <fieldset class="todo-list">
+              <legend class="todo-list__title">My Special Todo List</legend>
+              <div class="todoform">
+              <label class="todo-list__label">
+                <input type="checkbox" name="item1" id="item1" />
+                <i class="check"></i>
+                <span>Work on CST Project</span>
+              </label>
+              <label class="todo-list__label">
+                <input type="checkbox" name="item2" id="item2" />
+                <i class="check"></i>
+                <span>Watch CST Lectures</span>
+              </label>
+              <label class="todo-list__label">
+                <input type="checkbox" name="item3" id="item3" />
+                <i class="check"></i>
+                <span>Cook Dinner</span>
+              </label>
+              <label class="todo-list__label">
+                <input type="checkbox" name="item4" id="item4" />
+                <i class="check"></i>
+                <span>Code All Night</span>
+              </label>
+            </div>
+            </fieldset>
+          </form> 
+    </div>
+        <button id="spinButton" class="spin">+ Spin</button>
 
 
-
+</body>
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
@@ -54,13 +99,9 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script type="text/javascript" src="scripts/mainpage.js"></script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
- <script>
- </script>
 
-</body>
 </html>                       
