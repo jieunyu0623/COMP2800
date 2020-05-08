@@ -230,6 +230,12 @@ body {
   .todo-list .todo-list__title {
     padding: 3px 6px;
     color: #84A7EA;
+    text-shadow:
+    3px 3px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
   }
   .todo-list .todo-list__label {
     display: -webkit-box;
