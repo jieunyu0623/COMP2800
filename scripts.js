@@ -6,8 +6,6 @@ function getActivities() {
                 arr: firebase.firestore.FieldValue.arrayUnion( 'newItem' );
                 let x = snap.data().arr;
                 console.log(snap.data().arr);
-
-
             });
     });
 }
@@ -28,7 +26,7 @@ function addActivities(){
         db.collection("Users").doc(user.uid)
         .update({
            
-            arr: firebase.firestore.FieldValue.arrayUnion("item to be added into array. ")
+            arr: firebase.firestore.FieldValue.arrayUnion("item")
         
         })
     });
