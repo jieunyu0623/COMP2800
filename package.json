@@ -1,10 +1,11 @@
 {
   "name": "projects",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is my readme file.\r This is the chatbox. Only chatbox is to be worked on here.",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hihihippo/COMP2800-Team-BBY-26-Spin-The-Wheel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hihihippo/COMP2800-Team-BBY-26-Spin-The-Wheel/issues"
+  },
+  "homepage": "https://github.com/hihihippo/COMP2800-Team-BBY-26-Spin-The-Wheel#readme"
 }
