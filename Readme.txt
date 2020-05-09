@@ -1,2 +1,2 @@
 This is my readme file.
-This is the login through firebase.
+This is the main page. leads to all other pages through src
