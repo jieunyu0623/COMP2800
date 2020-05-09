@@ -306,8 +306,7 @@ body {
   }
 
   .spin {
-    display: block;
-    position: absolute;
+    
     margin-top: 550px;
     margin-left: 400px;
     border: 2px solid black;
@@ -325,5 +324,56 @@ body {
   .spin:hover {
     background-color: #64d864;
   }
+
+  input{
+    resize: none;
+    border-radius: 5px;
+    size: 50px;
+    height: 100%;
+}
+
+#main{
+    text-align: center;
+    padding: 45px;
+    border: 5px solid;
+    border-radius: 7px;
+    width: 45%;
+    background-color: #c2e5ef;
+    background-clip: border-box;
+    margin-left: 25%;
+    margin-top: 8%;
+    height: 300px;
+    display: inline-block;
+
+}
+
+.button{
+    color: #fff;
+    background-color: #3fb2bf;
+    margin: 10px 2px;
+    border: none;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px
+}
+
+.button:hover {
+  background-color: #34949F;
+}
+
+#login-div{
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+#logout-div{
+  display: flex;
+  display: none;
+}
+
+#afterlogin {
+  margin-left: 20px;
+}
 
 

@@ -16,18 +16,40 @@
     <!----------------------------------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
    
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
+    <link rel="stylesheet" type="text/css" href="mainpage.css">
  
 </head>
 <body>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
+    <a href="mainpage.html" class="title"><h1>Project Spin The Wheel</h1></a>
+<div id="mySidenav" class="sidenav">
+    <a data-modal-target="#modal" id="about">About</a>
+    <a href="#" id="calendar">Calendar</a>
+    <a href="#" id="todo">My To-Do List</a>
+    <a href="#" id="feedback">Feedback</a>
+  </div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">A b o u t  U s . . .</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        We are team 26 :) 
+      </div>
+    </div>
+    <div id="overlay"></div>
+   
 
-    <h1>The login page</h1>
+
+</body>
+
     <!-----------Firebase UI Account Set-Up-->
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
@@ -43,7 +65,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src = "scripts/firebase_api.js"> </script>
+    <script src ="scripts/firebase_api.js"> </script>
     <script>
         // This snippet goes at the JS section at the end of the body tag in "login.html"
         // After firebase libraries via CDN are sourced
@@ -97,7 +119,7 @@
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: 'mainpage.html',
+            signInSuccessUrl: 'redirect_mainpage.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 //firebase.auth.GoogleAuthProvider.PROVIDER_ID,

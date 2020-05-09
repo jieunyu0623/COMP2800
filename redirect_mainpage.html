@@ -22,7 +22,6 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" type="text/css" href="mainpage.css">
-    <script type="text/javascript" defer src="mainpage.js"></script>
  
 </head>
 <body>
@@ -30,7 +29,7 @@
     <!--  HTML Section -->
     <!----------------------->
 <a href="mainpage.html" class="title"><h1>Project Spin The Wheel</h1></a>
-<button class="loginbutton" onclick="goToLogin()">Log In</button>
+<p id="afterlogin">Welcome back, <span id="getUserName">User</span></p> <!--user name after welcome back message-->
 <div id="mySidenav" class="sidenav">
     <a data-modal-target="#modal" id="about">About</a>
     <a href="#" id="calendar">Calendar</a>
@@ -94,14 +93,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts/firebase_api.js"></script>
   
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    <script type="text/javascript" defer src="mainpage.js"></script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
+    <script>
+    showName();
+    </script>
 
 </html>                       

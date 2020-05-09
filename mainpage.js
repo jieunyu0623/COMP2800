@@ -35,3 +35,13 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+function goToLogin() {
+  window.location.replace("login.html")
+}
+
+function showName() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    document.getElementById("getUserName").innerHTML = user.displayName;
+  });
+}
