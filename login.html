@@ -101,7 +101,7 @@
                                 email: user.email,
                             }).then(function () {
                                 console.log("New user added to firestore");
-                                window.location.assign("mainpage.html");
+                                window.location.assign("redirect_mainpage.html");
                             })
                             .catch(function (error) {
                                 console.log("Error adding new user: " + error);
