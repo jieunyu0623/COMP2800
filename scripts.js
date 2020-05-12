@@ -1,14 +1,14 @@
 //this function will grab the array from the users the array is called arr
 getActivities();
-var act = localStorage.getItem("activities");
-console.log(act);
+var arr = localStorage.getItem("arr");
+console.log(arr);
 function getActivities() {
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("Users").doc(user.uid)
             .onSnapshot(function (snap) {
                 x = snap.data().arr;
-                console.log(snap.data().arr);
-				localStorage.setItem("activities",x);
+                console.log(x);
+				localStorage.setItem("arr",x);
             });
     });
 }
