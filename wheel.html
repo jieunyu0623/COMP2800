@@ -66,8 +66,9 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+        <script src = "firebase_api.js"></script>
 		<script src = "scripts.js"></script>
-		<script src = "firebase_api.js"></script>
+		
 
 
      <!--------------------------------------------------------------------->
@@ -94,10 +95,10 @@
                  {"label":"do the slits", },
 
         ];
-				console.log(activities.length);
+				console.log(arr.length);
 			
-			for(let i = 0; i < activities.length;i++){
-				data.push({"label":`{$activities[i]}`, },);
+			for(let i = 0; i < arr.length;i++){
+				data.push({"label":`{$arr[i]}`, },);
 			}
 			
 
