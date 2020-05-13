@@ -16,11 +16,12 @@ function getActivities() {
 
 //this function will remove the item to be removed for the users
     function removeActivities(){
+		var deleteItem = document.getElementById("remove").value;
         firebase.auth().onAuthStateChanged(function (user) {
         db.collection("Users").doc(user.uid)
         .update({
            
-            arr: firebase.firestore.FieldValue.arrayRemove("item to be removed")
+            arr: firebase.firestore.FieldValue.arrayRemove(deleteItem)
         
         })
     });

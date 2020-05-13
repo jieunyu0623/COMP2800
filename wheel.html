@@ -31,6 +31,9 @@
 			#adding{
 				margin: 20px;
 			}
+			#chart{
+				padding-top: 100px;
+			}
     </style>
  
 </head>
@@ -44,6 +47,8 @@
 		<div id= adding>
 		<input type = "text" id="item">
     <button type = "submit" id = "submit" onclick="addActivities()"> Add </button>
+		<input type = "text" id="remove">
+    <button type = "submit" id = "delete" onclick="removeActivities()"> remove </button>
 		</div>
 	
     <div id="chart"></div>
@@ -91,8 +96,7 @@
             color = d3.scale.category20();//category20c()
     
         var data = [
-                 {"label":"bake a cake", },
-                 {"label":"do the slits", },
+
 
         ];
 				console.log(arr.length);
