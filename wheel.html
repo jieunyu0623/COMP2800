@@ -66,7 +66,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-        <script src = "firebase_api.js"></script>
+        <script src = "/scripts/firebase_api.js"></script>
 		<script src = "scripts.js"></script>
 		
 
@@ -96,9 +96,11 @@
 
         ];
 				console.log(arr.length);
+			var sub = arr.split(",");
+			console.log(sub.length);
 			
-			for(let i = 0; i < arr.length;i++){
-				data.push({"label":`{$arr[i]}`, },);
+			for(let i = 0; i < sub.length;i++){
+				data.push({"label":sub[i]}, );
 			}
 			
 

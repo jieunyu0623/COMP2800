@@ -1,7 +1,8 @@
 //this function will grab the array from the users the array is called arr
 getActivities();
 var arr = localStorage.getItem("arr");
-console.log(arr);
+console.log("this is arr: " +arr);
+console.log(arr.length);
 function getActivities() {
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("Users").doc(user.uid)
