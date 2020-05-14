@@ -21,8 +21,18 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
+
     <link rel="stylesheet" type="text/css" href="mainpage.css">
+    <script defer src="/__/firebase/7.14.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.3/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
     <script type="text/javascript" defer src="mainpage.js"></script>
+
  
 </head>
 <body>
@@ -52,7 +62,7 @@
     </div>
     <div id="overlay"></div>
     <div>
-        <img id="wheel" src="images/wheel.gif"> 
+        <img id="wheel" src="css/images/wheel.gif"> 
     </div>
     <div id="todolist">
         <form>
@@ -84,6 +94,11 @@
           </form> 
     </div>
         <button id="spinButton" class="spin">+ Spin</button>
+        <div class = "center-text">
+            <a href="javascript:(function(){var css=document.createElement('style');css.type='text/css';css.innerHTML='@-moz-keyframes roll{100%25{-moz-transform:rotate(360deg);}}@-o-keyframes roll{100%25{-o-transform:rotate(360deg);}}@-webkit-keyframes roll{100%25{-webkit-transform:rotate(360deg);}}body{-moz-animation-name:roll;-moz-animation-duration:4s;-moz-animation-iteration-count:1;-o-animation-name:roll;-o-animation-duration:4s;-o-animation-iteration-count:1;-webkit-animation-name:roll;-webkit-animation-duration:4s;-webkit-animation-iteration-count:1;}';document.getElementsByTagName('head')[0].appendChild(css)})();" class ="roll button"> Roll</a>
+        </div>
+            
+      
 
 
 </body>
