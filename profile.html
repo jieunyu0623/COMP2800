@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Spin the Wheel</title>
    
-    <meta name="author" content="BCIT">
+    <meta name="author" content="Team 26">
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -22,12 +22,30 @@
     <!------------------------>
  
 </head>
-<body>
+<body onload='myProfile()'>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-
-    <h1>The dev page only merge stuff here</h1>
+<form method="post">
+    <h1 style="margin-left: 15px; margin-top: 15px;">User Profile</h1>
+    <p style="margin-left: 15px">Name:</p>
+    <input type="text" id="userName" style="margin-left: 15px" placeholder="Name">
+</br>
+</br>
+<p style="margin-left: 15px">Age:</p>
+    <input type="text" id="age" style="margin-left: 15px" placeholder="Age">
+</br>
+</br>
+<p style="margin-left: 15px">Gender:</p>
+    <input type="text" id="gender" style="margin-left: 15px" placeholder="Gender">
+</br>
+</br>
+<p style="margin-left: 15px">Description:</p>
+    <input type="text" id="description" style="margin-left: 15px" placeholder="Description">
+</br>
+</br>
+</form>
+    <button type="submit" id="submit" style="margin-left: 15px" onclick="writeUserData()">Submit</button>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -40,17 +58,25 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts/firebase_api.js"></script>
   
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-
+    <script src="scripts/profile.js"></script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
+    <script>
+    var userName = document.getElementById("userName").value;
+    var userAge = document.getElementById("age").value;
+    var userGender = document.getElementById("gender").value;
+    var userDescription = document.getElementById("description").value;
 
-
+    writeUserData(userName, userAge, userGender, userDescription);
+   // getUserData()
+    </script>
 </body>
 </html>                       
