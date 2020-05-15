@@ -1,0 +1,54 @@
+body {
+    background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('images/blue_checkered_table.jpg'); 
+}
+
+h1 {
+    font-size: 50px;
+    margin-left: 20px; 
+    margin-top: 15px;
+    color: white;
+    text-shadow:
+        3px 3px 0 black,
+      -1px -1px 0 black,  
+       1px -1px 0 black,
+       -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+h1:hover {
+    color: #76B9F6;
+}
+
+button {
+    margin-left: 20px;
+    border-color: #84A7EA;
+    border-radius: 5px;
+    background-color: #84A7EA;
+    font-weight: 700;
+    padding: 9px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px #999;
+}
+
+button:hover {
+    background-color: #a8c1f0;
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+p {
+    margin-left: 20px; 
+    font-weight: bold;
+    display: inline-block;
+    color: black;
+}
+
+#userName #age #gender #description {
+    margin-left: 20px; 
+    display: inline-block;
+}
+

@@ -20,29 +20,36 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
+    <link type="text/css" rel="stylesheet" href="profile.css">
  
 </head>
 <body onload='myProfile()'>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-    <h1 style="margin-left: 15px; margin-top: 15px;">User Profile</h1>
+    <h1>U s e r  P r o f i l e</h1>
 </br>
+    <button onclick="editProfile()">Edit Profile</button>
+</br></br></br>
+<div id="box1">
+    <p>N a m e : </p>
+    <p id="userName">User's Name</p>
+</div>
 </br>
-    <button style="margin-left: 15px;" onclick="editProfile()">Edit Profile</button>
+<div id="box2">
+<p>A g e : </p>
+<p id="age">User's Age</p>
+</div>
 </br>
+<div id="box3">
+<p>G e n d e r : </p>
+<p id="gender">User's Gender</p> 
+</div>
 </br>
-    <p style="margin-left: 15px; font-weight: bold;">Name:</p>
-    <p id="userName" style="margin-left: 15px; display: inline-block">User's Name</p>
-</br>
-<p style="margin-left: 15px; font-weight: bold;">Age:</p>
-<p id="age" style="margin-left: 15px; display: inline-block">User's Age</p>
-</br>
-<p style="margin-left: 15px; font-weight: bold;">Gender:</p>
-<p id="gender" style="margin-left: 15px; display: inline-block">User's Gender</p> 
-</br>
-<p style="margin-left: 15px; font-weight: bold;">Description:</p>
-<p id="description" style="margin-left: 15px; display: inline-block">User's Description</p>  
+<div id="box4">
+<p>D e s c r i p t i o n : </p>
+<p id="description">User's Description</p> 
+</div> 
 </br>
 
     <!----------------------------------------------->
