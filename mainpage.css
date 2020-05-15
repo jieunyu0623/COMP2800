@@ -175,7 +175,7 @@ body {
     pointer-events: all;
   }
 
-  .loginbutton {
+  #loginbutton {
     background-color: #ffb0b0;
     border-radius: 5px;
     border: 2px solid black;
@@ -185,7 +185,7 @@ body {
     margin-left: 20px;
   }
 
-  .loginbutton:hover {
+  #loginbutton:hover {
     background-color: #ffd8d8;
   }
 
@@ -374,6 +374,11 @@ body {
 
 #afterlogin {
   margin-left: 20px;
+  display: inline-block;
+  font-family: sans-serif;
+  color: black;
+  font-weight: bold;
 }
+
 
 

@@ -36,12 +36,28 @@ function closeModal(modal) {
   overlay.classList.remove('active')
 }
 
+//before User logs in 
 function goToLogin() {
-  window.location.replace("login.html")
+  window.location.replace("login.html");
 }
 
-function showName() {
-  firebase.auth().onAuthStateChanged(function (user) {
-    document.getElementById("getUserName").innerHTML = user.displayName;
+//after User logs in 
+function signOut() {
+  firebase.auth().signOut().then(function() {
+    console.log('Signed out');
+    window.location.replace("mainpage.html");
+  }, function(error) {
+    console.error('Sign out Error: ', error);
   });
 }
+
+//displays User's name on the mainpage when the user logs in 
+var user = firebase.auth().currentUser;
+function showName() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if(user != null) {
+      document.getElementById("getUserName").innerHTML = user.displayName;
+    }
+  });
+}
+showName();
