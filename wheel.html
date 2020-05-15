@@ -20,22 +20,10 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="wheel.css">
+  <meta charset="utf-8">
     <title>Wheel of Fortune Bingo</title>
-    <style type="text/css">
-    text{
-        font-family:Helvetica, Arial, sans-serif;
-        font-size:11px;
-        pointer-events:none;
-    }
-			#adding{
-				margin: 20px;
-			}
-			#chart{
-				padding-top: 100px;
-			}
-    </style>
- 
+
 </head>
 <body>
     <!----------------------->
@@ -45,8 +33,10 @@
     <h1>The wheel page</h1>
 	
 		<div id= adding>
+           <p id="p1"> Add an activity! </p>
 		<input type = "text" id="item">
     <button type = "submit" id = "submit" onclick="addActivities()"> Add </button>
+          <p id="p2"> Delete an activity! </p>
 		<input type = "text" id="remove">
     <button type = "submit" id = "delete" onclick="removeActivities()"> remove </button>
 		</div>
