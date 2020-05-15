@@ -1,59 +1,78 @@
 
 var user = firebase.auth().currentUser;
-if(!user == null) {
-  console.log("logged in");
-} else {
-  console.log("user not found!");
+
+firebase.auth().onAuthStateChanged(function (user) {
+  if(user != null) {
+    console.log("logged in");
+    writeUserData;
+  }
+  if(user == null) {
+    console.log("user not found!");
+  }
+
+})
+
+function writeUserData() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    document.getElementById("submit").addEventListener("click", function(e) {
+      var userName = document.getElementById("userName").value;
+      var userAge = document.getElementById("age").value;
+      var userGender = document.getElementById("gender").value;
+      var userDescription = document.getElementById("description").value;
+      if (user) {
+        // User is signed in.
+        db.collection("Users").doc(user.uid).update({
+          username: userName,
+          age: userAge,
+          gender: userGender,
+          description: userDescription
+        })
+        .then(function() {
+          console.log("User profile successfully written!");
+          window.alert("Your Profile is successfully updated!");
+          window.location.replace("profile.html");
+
+        })
+        .catch(function(error) {
+          console.error("Error adding document: ", error);
+        });
+      } else {
+        console.log("no user is found!");
+      }
+  
+    })
+  })
+  
 }
 
 function myProfile() {
-  if (user) {
-    // User is signed in.
-    var db = firebase.firestore();
-      var docRef = db.collection("Users").doc(user.uid);
-      docRef.get().then(function(doc) {
-         if(doc && doc.exists) {
-         const myData = doc.data();
-         const name = myData.username;
-         const age = myData.age;
-         const gender = myData.gender;
-         const description = myData.description;
-         document.getElementById("userName").value = name;
-         document.getElementById("age").value = age;
-         document.getElementById("gender").value = gender;
-         document.getElementById("description").value = description;
-
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      // User is signed in.
+      var db = firebase.firestore();
+        var docRef = db.collection("Users").doc(user.uid);
+        docRef.get().then(function(doc) {
+           if(doc && doc.exists) {
+           const myData = doc.data();
+           const name = myData.username;
+           const age = myData.age;
+           const gender = myData.gender;
+           const description = myData.description;
+           document.getElementById("userName").innerHTML = name;
+           document.getElementById("age").innerHTML = age;
+           document.getElementById("gender").innerHTML = gender;
+           document.getElementById("description").innerHTML = description;
+  
+      }
+      }).catch(function(error) {
+      console.log("Got an error: ",error);
+      });
+    } else {
+      console.log("no user found!")
     }
-    }).catch(function(error) {
-    console.log("Got an error: ",error);
-    });
-  } else {
-    // No user is signed in.
-  }
+
+  })
 }
-
-
-function writeUserData(userName, userAge, userGender, userDescription) {
-  if (user) {
-    // User is signed in.
-    db.collection("Users").doc(user.uid).set({
-      username: userName,
-      age: userAge,
-      gender: userGender,
-      description: userDescription
-    })
-    .then(function(docRef) {
-      console.log("Document written with ID: ", docRef.id);
-      console.log("User profile successfully written!");
-    })
-    .catch(function(error) {
-      console.error("Error adding document: ", error);
-    });
-  } else {
-    console.log("no user is found!");
-  }
-}
-
 
 function getUserData() {
   firebase.auth().onAuthStateChanged(function (user) {
@@ -73,6 +92,11 @@ function getUserData() {
       console.log(userDescription)
     })
   })
+}
+
+  function editProfile() {
+    window.location.replace("editprofile.html");
+  }
     //user.updateProfile({
      // username: name,
      // age: age,
@@ -98,4 +122,4 @@ function getUserData() {
    // }).then(function () {
       //window.location.replace("/profile");
    // });
-}
+
