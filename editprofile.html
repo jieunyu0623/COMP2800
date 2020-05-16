@@ -20,6 +20,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
+    <link type="text/css" rel="stylesheet" href="profile.css">
  
 </head>
 <body> <!--onload='myProfile()'>
@@ -27,25 +28,27 @@
     <!--  HTML Section -->
     <!----------------------->
 <form method="post">
-    <h1 style="margin-left: 15px; margin-top: 15px;">User Profile</h1>
-    <p style="margin-left: 15px">Name:</p>
-    <input type="text" id="userName" style="margin-left: 15px" placeholder="Name">
+    <h1>U s e r  P r o f i l e</h1>
+</br></br>
+    <p>N a m e : </p>
+    <input type="text" id="userName" class="box1">
 </br>
 </br>
-<p style="margin-left: 15px">Age:</p>
-    <input type="text" id="age" style="margin-left: 15px" placeholder="Age">
+<p>A g e : </p>
+    <input type="text" id="age" class="box2">
 </br>
 </br>
-<p style="margin-left: 15px">Gender:</p>
-    <input type="text" id="gender" style="margin-left: 15px" placeholder="Gender">
+<p>G e n d e r : </p>
+    <input type="text" id="gender" class="box3">
 </br>
 </br>
-<p style="margin-left: 15px">Description:</p>
-    <input type="text" id="description" style="margin-left: 15px" placeholder="Description">
+<p>D e s c r i p t i o n : </p>
+    <textarea id="description" class="box4"></textarea>
 </br>
 </br>
 </form>
-    <button type="submit" id="submit" style="margin-left: 15px" onclick="writeUserData()">Submit</button>
+</br>
+    <button type="submit" id="submit" onclick="writeUserData()">Submit</button>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->

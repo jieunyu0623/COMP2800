@@ -16,13 +16,17 @@ function writeUserData() {
   firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("submit").addEventListener("click", function(e) {
       var userName = document.getElementById("userName").value;
-      var userAge = document.getElementById("age").value;
-      var userGender = document.getElementById("gender").value;
-      var userDescription = document.getElementById("description").value;
-      if (user) {
+        var userAge = document.getElementById("age").value;
+        var userGender = document.getElementById("gender").value;
+        var userDescription = document.getElementById("description").value;
+      if (userName === "" || userAge === "" || userGender === "" || userDescription == "") {
+        window.alert("please fill out everything to update!");
+      }
+        if (user && userName && userAge && userGender && userDescription) {
+        
         // User is signed in.
         db.collection("Users").doc(user.uid).update({
-          username: userName,
+          name: userName,
           age: userAge,
           gender: userGender,
           description: userDescription
@@ -38,8 +42,7 @@ function writeUserData() {
         });
       } else {
         console.log("no user is found!");
-      }
-  
+      }   
     })
   })
   
@@ -54,7 +57,7 @@ function myProfile() {
         docRef.get().then(function(doc) {
            if(doc && doc.exists) {
            const myData = doc.data();
-           const name = myData.username;
+           const name = myData.name;
            const age = myData.age;
            const gender = myData.gender;
            const description = myData.description;
@@ -78,7 +81,7 @@ function getUserData() {
   firebase.auth().onAuthStateChanged(function (user) {
     db.collection("Users").doc(user.uid)
     .onSnapshot(function (snap) {
-      name = snap.data().username
+      name = snap.data().name
       age = snap.data().age
       gender = snap.data().gender
       description = snap.data().description
@@ -97,6 +100,11 @@ function getUserData() {
   function editProfile() {
     window.location.replace("editprofile.html");
   }
+
+  function goBack() {
+    window.location.replace("redirect_mainpage.html");
+  }
+
     //user.updateProfile({
      // username: name,
      // age: age,
