@@ -24,7 +24,52 @@
     <link rel="stylesheet" type="text/css" href="mainpage.css">
 
  <style>
-  @media (max-width: 375px) {
+   @media (min-width: 1025px){
+         h1 {
+      font-size: 70px; 
+   }
+     #firebaseui-auth-container {
+    margin-top: 90px; 
+     }
+     #mySidenav a {
+      margin: 200px 0px 0px 0px;
+     }
+   }
+    @media (min-width: 600px) and (max-width: 1024px) {
+      h1 {
+      font-size: 70px; 
+   }
+     
+     #mySidenav a {
+      margin: 220px 0px 0px 0px;
+     }
+     
+     #firebaseui-auth-container {
+     margin-top: 100px; 
+     }
+     }
+  
+     @media (min-width: 376px) and (max-width: 600px) {
+    #firebaseui-auth-container {
+      width: 310px; 
+      margin-left: 50px; 
+      margin-top: 70px; 
+          z-index: -1;
+      position: absolute;
+  
+      }
+       h1 {
+      font-size: 70px; 
+    }
+    #mySidenav a {
+      margin: 220px 0px 0px 0px;
+      width: 140px; 
+      left: -120px;
+      font-size: 15px;
+    }
+   }
+  
+      @media (max-width: 375px) {
     #firebaseui-auth-container {
       width: 310px; 
       margin-left: 42px; 
@@ -41,6 +86,8 @@
     h1 {
       font-size: 70px; 
     }
+   }
+     
   </style>
 
 </head>
