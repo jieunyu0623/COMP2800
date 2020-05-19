@@ -379,6 +379,7 @@ body {
   color: black;
   font-weight: bold;
 }
-
-
+h1 {
+  font-size: 70px; 
+}
 
