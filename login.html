@@ -9,7 +9,7 @@
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
     <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
@@ -22,7 +22,27 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" type="text/css" href="mainpage.css">
- 
+
+ <style>
+  @media (max-width: 375px) {
+    #firebaseui-auth-container {
+      width: 310px; 
+      margin-left: 42px; 
+      margin-top: 50px;
+        z-index: -1;
+      position: absolute;
+    }
+    #mySidenav a {
+      margin: 310px 0px 0px 0px;
+      width: 140px; 
+      left: -120px;
+      font-size: 15px;
+    }
+    h1 {
+      font-size: 70px; 
+    }
+  </style>
+
 </head>
 <body>
     <!----------------------->
