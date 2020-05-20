@@ -9,7 +9,7 @@
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
     <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!----------------------------------------------->
@@ -23,6 +23,33 @@
     <!------------------------>
 
     <link rel="stylesheet" type="text/css" href="mainpage.css">
+  <style>
+   @media (min-width: 586px) and (max-width: 1024px) {
+    
+     .todo-list__title {
+       position: absolute;
+       margin-top: 700px; 
+       right: 800px; 
+     }
+     .todoform {
+       position: absolute;
+       margin-top: 1000px; 
+       right: 500px; 
+     }
+     #afterlogin {
+       margin-left: 20px; 
+     }
+    }
+    @media (min-width: 375px) and (max-width: 585px){
+      #loginbutton {
+       float: left; 
+      }
+      #mySidenav a {
+    margin: 150px 0px 0px 0px;
+    position: absolute;
+    }
+  
+  </style>
     <script defer src="/__/firebase/7.14.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/7.14.3/firebase-auth.js"></script>
@@ -53,11 +80,15 @@
         <button data-close-button class="close-button">&times;</button>
       </div>
       <div class="modal-body">
-        W e  a r e  T e a m 2 6 :) <br><br>
-        C h r i s t o p h e r  Z h a n g<br><br>
-        S i m r a n  G a n d h i<br><br>
-        J i e u n  Y u<br><br>
-        A n m o l 
+       W e  a r e  T e a m  2 6 :) <br> <br>
+        C h r i s t o p h e r  Z h a n g
+        <img src = "css/images/snorlax.jpg" alt = "no image chris" style = "width:40px; height:40px;"> <br><br>
+        S i m r a n  G a n d h i
+        <img src = "css/images/sim.jpg" alt = "no image sim" style = "width:40px; height:40px;"> <br><br>
+        J i e u n  Y u
+        <img src = "css/images/houhou.gif" alt = "no image mary" style = "width:40px; height:40px;"> <br> <br>
+        A n m o l S i n g h
+        <img src = "css/images/anmol.jpg" alt = "no image anmol" style = "width:40px; height:40px;"> <br> <br>
       </div>
     </div>
     <div id="overlay"></div>
@@ -67,7 +98,7 @@
     <div id="todolist">
         <form>
             <fieldset class="todo-list">
-              <legend class="todo-list__title">My Special Todo List</legend>
+              <legend class="todo-list__title">My Activities List</legend>
               <div class="todoform">
               <label class="todo-list__label">
                 <input type="checkbox" name="item1" id="item1" />
