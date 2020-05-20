@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" type="text/css" href="mainpage.css">
   <style>
-   @media (min-width: 586px) and (max-width: 1024px) {
+   @media (min-width: 706px) and (max-width: 1024px) {
     
      .todo-list__title {
        position: absolute;
@@ -36,19 +36,37 @@
        margin-top: 1000px; 
        right: 500px; 
      }
-     #afterlogin {
-       margin-left: 20px; 
-     }
     }
-    @media (min-width: 375px) and (max-width: 585px){
+    @media (min-width: 375px) and (max-width: 707px){
+      
       #loginbutton {
-       float: left; 
+    float: left; 
+        margin-top: -10px;
+     margin-left: 10px; 
       }
       #mySidenav a {
-    margin: 150px 0px 0px 0px;
-    position: absolute;
+      margin: 260px 0px 0px 0px;
+     }
+      #wheel {
+        width: 400px;
+        margin-left: -20px;
+      }
+      #spinButton {
+        margin-left: 130px;
+        margin-top: 480px
     }
-  
+       .todo-list__title {
+       position: absolute;
+       margin-top: 600px; 
+       right: 900px; 
+     }
+     .todoform {
+       position: absolute;
+       margin-top: 900px; 
+       right: 690px; 
+      }
+    }
+
   </style>
     <script defer src="/__/firebase/7.14.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
