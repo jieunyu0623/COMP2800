@@ -5,6 +5,7 @@
     <title>Spin the Wheel</title>
    
     <meta name="author" content="BCIT">
+    <meta name="google-signin-client_id" content="237429609040-k3fb3cfhc3ur4qa7svhgfkeronv72b7u.apps.googleusercontent.com">
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -52,6 +53,7 @@
 
     <!-----------Firebase UI Account Set-Up-->
     <div id="firebaseui-auth-container"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <div id="loader">Loading...</div>
 
     <!----------------------------------------------->
@@ -66,6 +68,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src ="scripts/firebase_api.js"> </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         // This snippet goes at the JS section at the end of the body tag in "login.html"
         // After firebase libraries via CDN are sourced
@@ -122,7 +125,7 @@
             signInSuccessUrl: 'redirect_mainpage.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
-                //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                 //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
                 //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
                 //firebase.auth.GithubAuthProvider.PROVIDER_ID,
