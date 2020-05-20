@@ -5,6 +5,8 @@
     <title>Spin the Wheel</title>
    
     <meta name="author" content="BCIT">
+    <meta name="google-signin-client_id" content="237429609040-k3fb3cfhc3ur4qa7svhgfkeronv72b7u.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -108,6 +110,7 @@
 
     <!-----------Firebase UI Account Set-Up-->
     <div id="firebaseui-auth-container"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <div id="loader">Loading...</div>
 
     <!----------------------------------------------->
@@ -122,6 +125,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src ="scripts/firebase_api.js"> </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         // This snippet goes at the JS section at the end of the body tag in "login.html"
         // After firebase libraries via CDN are sourced
@@ -135,6 +139,21 @@
         // - enable authentication method (email/pwd signin)
 
         // Initialize the FirebaseUI Widget using Firebase.
+        function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+      
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         var uiConfig = {
             callbacks: {
@@ -178,7 +197,7 @@
             signInSuccessUrl: 'redirect_mainpage.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
-                //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                 //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
                 //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
                 //firebase.auth.GithubAuthProvider.PROVIDER_ID,
