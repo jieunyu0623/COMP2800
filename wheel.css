@@ -84,6 +84,10 @@ svg {
 			#chart{
 				padding-top: 100px;
 			}
+#theList {
+  border-radius: 10px; 
+  margin-left: 10px 
+}
 @media (min-width: 770px) and (max-width: 1024px) {
   svg {
     margin-left: 300px; 

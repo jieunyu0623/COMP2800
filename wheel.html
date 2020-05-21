@@ -42,7 +42,7 @@
 		</div>
 	
     <div id="chart"></div>
-    
+    <button type="submit" id="theList" onclick="goToList()"> My Activities List</button>
 
 
     <!----------------------------------------------->
@@ -69,9 +69,12 @@
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-  	<script>  
+  	
+  <script>  
 
-			
+			function goToList() {
+  window.location.replace("todolist.html");
+}
 		</script>
 		    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -219,6 +222,5 @@
             return array;
         }
     </script>
-
 </body>
 </html>                       
