@@ -42,7 +42,7 @@
           text-align: center;
     }
      }
-    @media (min-width: 375px) and (max-width: 707px){
+    @media (min-width: 376px) and (max-width: 707px){
       
       #loginbutton {
     float: left; 
@@ -72,17 +72,57 @@
       }
         #afterlogin {
           position: absolute;
-       left: 160px; 
+        left: 160px; 
           top: 220px;
           text-align: center;
      }
       .sharer {
-  float: left; 
      font-weight: 700;
     font-size: 15px;
     margin-top: 800px; 
 }
     }
+     
+        @media (max-width: 375px) {
+        #loginbutton {
+    float: left; 
+        margin-top: -10px;
+     margin-left: 10px; 
+      }
+      #mySidenav a {
+      position: absolute;
+      margin: 350px 0px 0px 0px;
+     }
+      #wheel {
+        width: 400px;
+        margin-left: -100px;
+        margin-top: 80px; 
+      }
+      #spinButton {
+        margin-left: 70px;
+        margin-top: 480px
+    }
+       .todo-list__title {
+       position: absolute;
+       margin-top: 600px; 
+       right: 950px; 
+     }
+     .todoform {
+       position: absolute;
+       margin-top: 900px; 
+       right: 750px; 
+      }
+        #afterlogin {
+          position: absolute;
+        left: 100px; 
+          top: 330px;
+          text-align: center;
+    }
+            .sharer {
+     font-weight: 700;
+    font-size: 15px;
+    margin-top: 800px; 
+}
 
   </style>
  
@@ -150,7 +190,7 @@
             </fieldset>
           </form> 
     </div>
-        <button id="spinButton" class="spin">+ Spin</button>
+        <button id="spinButton" onclick="goToWheel()" class="spin">+ Spin</button>
 
   <button class="sharer"
         data-sharer="facebook" 

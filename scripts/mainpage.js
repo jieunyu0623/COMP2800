@@ -61,3 +61,7 @@ function showName() {
   });
 }
 showName();
+
+function goToWheel() {
+  window.location.replace("wheel.html");
+}
