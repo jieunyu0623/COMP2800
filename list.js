@@ -20,3 +20,15 @@ function getlanded() {
             });
     });
 }
+
+function removeActivities(){
+		var deleteItem = document.getElementById("remove").value;
+        firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("Users").doc(user.uid)
+        .update({
+           
+            landed: firebase.firestore.FieldValue.delete()
+        
+        })
+    });
+}
