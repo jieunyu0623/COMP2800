@@ -78,3 +78,10 @@ button {
   font-size: 20pt; 
   margin-left: 20px; 
 }
+ @media (max-width: 375px) {
+   #list {
+     width: 330px; 
+   }
+
+
+}
