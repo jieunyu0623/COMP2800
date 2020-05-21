@@ -1,9 +1,22 @@
-getUser();
-function getUser(){
-		db.collection("Users").doc(user.uid).onSnapshot(function (snap) {
-								console.log("uid: ", user.uid);
-								console.log("current data is...", snap.data()['name']);
-								document.getElementById("userN").innerHTML = snap.data()['name'];
-		});
+getname();
+function getname() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("Users").doc(user.uid)
+            .onSnapshot(function (snap) {
+                x = snap.data().name;
+                console.log(x);
+                localStorage.setItem("name",x);
+            });
+    });
 }
-console.log(getUser());
+getlanded();
+function getlanded() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("Users").doc(user.uid)
+            .onSnapshot(function (snap) {
+                x = snap.data().landed;
+                console.log(x);
+                localStorage.setItem("landed",x);
+            });
+    });
+}
