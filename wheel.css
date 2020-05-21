@@ -92,7 +92,8 @@ svg {
 }
 @media (min-width: 375px) and (max-width: 769px) {
   svg {
-    margin-top: 80px;
-    margin-left: 400px; 
+    position: absolute;
+     right: -10px;
+     top: 750px; 
 }
   }
