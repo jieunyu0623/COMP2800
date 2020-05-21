@@ -10,6 +10,9 @@ var firebaseConfig = {
   };
 
   firebase.initializeApp(firebaseConfig);
+<<<<<<< HEAD
   firebase.auth()
   //firebase.analytics();
+=======
+>>>>>>> todolist
 const db = firebase.firestore();
