@@ -168,8 +168,23 @@
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path")
                         .attr("fill", "#111");
                     //populate question
-                    d3.select("#question h1")
-                        .text(data[picked].question);
+                    d3.select("#label")
+                        .text(data[picked]);
+										console.log(picked);
+										console.log(sub[picked]);
+										landedItem();
+										function landedItem(){
+        								firebase.auth().onAuthStateChanged(function (user) {
+        								db.collection("Users").doc(user.uid)
+        								.update({
+        								   
+        								    landed: firebase.firestore.FieldValue.arrayUnion(sub[picked])
+													
+        								})
+				
+										});
+}
+
                     oldrotation = rotation;
                 
                     container.on("click", spin);

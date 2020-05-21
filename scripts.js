@@ -2,7 +2,6 @@
 getActivities();
 var arr = localStorage.getItem("arr");
 console.log("this is arr: " +arr);
-console.log(arr.length);
 function getActivities() {
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("Users").doc(user.uid)
@@ -39,3 +38,17 @@ var inputItem = document.getElementById("item").value;
 				
     });
 }
+
+//landedItem();
+//function landedItem(){
+//
+//        firebase.auth().onAuthStateChanged(function (user) {
+//        db.collection("Users").doc(user.uid)
+//        .update({
+//           
+//            landed: firebase.firestore.FieldValue.arrayUnion(sub[picked])
+//					
+//        })
+//				
+//    });
+//}
