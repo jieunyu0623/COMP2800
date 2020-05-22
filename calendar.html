@@ -20,6 +20,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
+    <link rel="stylesheet" href="calendar.css">
 
  
 </head>
@@ -27,10 +28,10 @@
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-    <h1>C a l e n d a r</h1>
-
-
-
+    <div class="content">
+        <h1 class="title">C a l e n d a r</h1>
+        <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+    </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -51,14 +52,19 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="script/calendar.js"></script>
+    <script src="calendar.js"></script>
 
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-    <script>
-
+    <script>           
+            let calendar = new VanillaCalendar({
+                selector: "#myCalendar",
+                onSelect: (data, elem) => {
+                    console.log(data, elem)
+                }
+            })
     </script>
 </body>
 </html>                       
