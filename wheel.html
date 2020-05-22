@@ -31,7 +31,7 @@
     <!--  HTML Section -->
     <!----------------------->
 
-    <h1>The wheel page</h1>
+    <h1>The Wheel Page</h1>
 	
 		<div id= adding>
            <p id="p1"> Add an activity! </p>
@@ -44,8 +44,8 @@
 		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	
     <div id="chart"></div>
-    <button type="submit" id="theList" onclick="goToList()"> My Activities List</button>
-
+     <button type="submit" id="theList" onclick="goToMain()"> Back</button>
+  <button type="submit" id="theList" onclick="goToList()"> My Activities List</button>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -76,6 +76,9 @@
             function goToList() {
   window.location.replace("todolist.html");
 }
+    function goToMain() {
+      window.location.replace("mainpage.html");
+    }
         </script>
 		    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
