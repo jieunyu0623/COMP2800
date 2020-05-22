@@ -3,6 +3,7 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
+//when the 'About' button is clicked, call openModal() function
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget)
@@ -11,6 +12,7 @@ openModalButtons.forEach(button => {
   })
 })
 
+//when the button is clicked anywhere other than the container, call closeModal() function
 overlay.addEventListener('click', () => {
   const modals = document.querySelectorAll('.modal.active')
   modals.forEach(modal => {
@@ -18,6 +20,7 @@ overlay.addEventListener('click', () => {
   })
 })
 
+//when the button is clicked anywhere other than the container, call closeModal() function
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal')
@@ -25,12 +28,14 @@ closeModalButtons.forEach(button => {
   })
 })
 
+//open the modal by adding class name active
 function openModal(modal) {
   if (modal == null) return
   modal.classList.add('active')
   overlay.classList.add('active')
 }
 
+//close the modal by removing the active class name
 function closeModal(modal) {
   if (modal == null) return
   modal.classList.remove('active')
@@ -61,8 +66,10 @@ function showName() {
     }
   });
 }
+
 showName();
 
+//directs to feedback page 
 function goToFeedback(){
   window.location.replace("feedback.html");
 }

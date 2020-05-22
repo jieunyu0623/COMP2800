@@ -1,6 +1,7 @@
-
+//get the current user
 var user = firebase.auth().currentUser;
 
+//to check if the user is logged in or not by firebase.
 firebase.auth().onAuthStateChanged(function (user) {
   if(user != null) {
     console.log("logged in");
@@ -12,6 +13,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 })
 
+//writing user's input to Firebase and store the data
 function writeUserData() {
   firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("submit").addEventListener("click", function(e) {
@@ -24,7 +26,6 @@ function writeUserData() {
       }
         if (user && userName && userAge && userGender && userDescription) {
         
-        // User is signed in.
         db.collection("Users").doc(user.uid).update({
           name: userName,
           age: userAge,
@@ -48,6 +49,7 @@ function writeUserData() {
   
 }
 
+//grab the user data from Firebase and display the data to the user.
 function myProfile() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -77,6 +79,7 @@ function myProfile() {
   })
 }
 
+//unused function.
 function getUserData() {
   firebase.auth().onAuthStateChanged(function (user) {
     db.collection("Users").doc(user.uid)
@@ -97,10 +100,12 @@ function getUserData() {
   })
 }
 
+  //directs to "edit profile" page.
   function editProfile() {
     window.location.replace("editprofile.html");
   }
 
+  //directs to "redirect main page".
   function goBack() {
     window.location.replace("redirect_mainpage.html");
   }
