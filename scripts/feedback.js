@@ -34,3 +34,6 @@ function addFeedback() {
   })
 
 }
+    function goBack() {
+  window.location.replace("redirect_mainpage.html");
+          }

@@ -16,6 +16,7 @@
         }
     })
 }) */
+  
 
 let VanillaCalendar = (function () {
     function VanillaCalendar(options) {
@@ -213,5 +214,6 @@ let VanillaCalendar = (function () {
 window.VanillaCalendar = VanillaCalendar
 
 
-
-
+      function goBack() {
+  window.location.replace("redirect_mainpage.html");
+          }
