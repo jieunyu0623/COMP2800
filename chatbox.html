@@ -1,0 +1,92 @@
+<Doctype!>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width,
+	initial-scale=1.0">
+	<meta http-equiv ="X-UA-Compatible" content = "ie=edge">
+	<title> Spin the Wheel </title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			display:flex;
+			justify-content: center;
+		}
+		#msg-container{
+			width:80%;
+
+		}
+		#msg-constainer div{
+			background-color: lightgrey;
+			padding:5px;
+		}
+	</style>
+
+<link rel="stylesheet" type="text/css" href="css/chatbox.css">
+		
+		<script defer src = "http://localhost:3000/socket.io/
+		socket.io.js"></script>
+		<script defer src = "script/chat_script.js"></script>
+</head>
+<body>
+	  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src = "firebase_api.js"> </script>
+
+
+
+	<div id = "msg-container"></div>
+	<form id = "send-container">
+		<input type = "text" id = "message-input">
+		<button type = "submit" id = "send-button"> Send </button>
+
+	</form>
+	<!-- minified snippet to load TalkJS without delaying your page -->
+<script>
+(function(t,a,l,k,j,s){
+s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
+;k=t.Promise;t.Talk={v:3,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
+.push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
+</script>
+
+<!-- container element in which TalkJS will display a chat UI -->
+<div id="talkjs-container" style="width: 90%; margin: 30px; height: 500px"><i>Loading chat...</i></div>
+
+<!-- TalkJS initialization code, which we'll customize in the next steps -->
+<script>
+Talk.ready.then(function() {
+    var me = new Talk.User({
+        id: "123456",
+        name: "Alice",
+        email: "alice@example.com",
+        photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+        welcomeMessage: "Hey there! How are you? :-)"
+    });
+    window.talkSession = new Talk.Session({
+        appId: t3XfOBWj,
+        me: me
+    });
+    var other = new Talk.User({
+        id: "654321",
+        name: "Sebastian",
+        email: "Sebastian@example.com",
+        photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
+        welcomeMessage: "Hey, how can I help?"
+    });
+
+    var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
+    conversation.setParticipant(me);
+    conversation.setParticipant(other);
+    var inbox = talkSession.createInbox({selected: conversation});
+    inbox.mount(document.getElementById("talkjs-container"));
+});
+</script>
+</body>
+</html>
