@@ -55,22 +55,12 @@
         margin-left: 130px;
         margin-top: 480px
     }
-       .todo-list__title {
-       position: absolute;
-       margin-top: 600px; 
-       right: 900px; 
-     }
-     .todoform {
-       position: absolute;
-       margin-top: 900px; 
-       right: 690px; 
-      }
     }
         @media (max-width: 375px) {
         #loginbutton {
-    float: left; 
+        float: left; 
         margin-top: -10px;
-     margin-left: 10px; 
+        margin-left: 10px; 
       }
       #mySidenav a {
       position: absolute;
@@ -83,17 +73,7 @@
       #spinButton {
         margin-left: 130px;
         margin-top: 480px
-    }
-       .todo-list__title {
-       position: absolute;
-       margin-top: 600px; 
-       right: 900px; 
-     }
-     .todoform {
-       position: absolute;
-       margin-top: 900px; 
-       right: 690px; 
-      }
+          }
       
     }
 
@@ -121,6 +101,7 @@
     <a href="#" id="calendar">Calendar</a>
     <a href="#" id="todo">User Profile</a>
     <a href="#" id="feedback">Feedback</a>
+  <a href="todolist.html" id="list">Activities List</a>
   </div>
     <div class="modal" id="modal">
       <div class="modal-header">
@@ -143,35 +124,7 @@
     <div>
         <img id="wheel" src="css/images/wheel.gif"> 
     </div>
-    <div id="todolist">
-        <form>
-            <fieldset class="todo-list">
-              <legend class="todo-list__title">My Activities List</legend>
-              <div class="todoform">
-              <label class="todo-list__label">
-                <input type="checkbox" name="item1" id="item1" />
-                <i class="check"></i>
-                <span>Work on CST Project</span>
-              </label>
-              <label class="todo-list__label">
-                <input type="checkbox" name="item2" id="item2" />
-                <i class="check"></i>
-                <span>Watch CST Lectures</span>
-              </label>
-              <label class="todo-list__label">
-                <input type="checkbox" name="item3" id="item3" />
-                <i class="check"></i>
-                <span>Cook Dinner</span>
-              </label>
-              <label class="todo-list__label">
-                <input type="checkbox" name="item4" id="item4" />
-                <i class="check"></i>
-                <span>Code All Night</span>
-              </label>
-            </div>
-            </fieldset>
-          </form> 
-    </div>
+   
         <button id="spinButton" class="spin">+ Spin</button>
         <div class = "center-text">
             <a href="javascript:(function(){var css=document.createElement('style');css.type='text/css';css.innerHTML='@-moz-keyframes roll{100%25{-moz-transform:rotate(360deg);}}@-o-keyframes roll{100%25{-o-transform:rotate(360deg);}}@-webkit-keyframes roll{100%25{-webkit-transform:rotate(360deg);}}body{-moz-animation-name:roll;-moz-animation-duration:4s;-moz-animation-iteration-count:1;-o-animation-name:roll;-o-animation-duration:4s;-o-animation-iteration-count:1;-webkit-animation-name:roll;-webkit-animation-duration:4s;-webkit-animation-iteration-count:1;}';document.getElementsByTagName('head')[0].appendChild(css)})();" class ="roll button"> Roll</a>

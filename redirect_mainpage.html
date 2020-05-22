@@ -76,11 +76,6 @@
           top: 220px;
           text-align: center;
      }
-      .sharer {
-     font-weight: 700;
-    font-size: 15px;
-    margin-top: 800px; 
-}
     }
      
         @media (max-width: 375px) {
@@ -118,11 +113,7 @@
           top: 330px;
           text-align: center;
     }
-            .sharer {
-     font-weight: 700;
-    font-size: 15px;
-    margin-top: 800px; 
-} }
+}
 
   </style>
  
@@ -139,6 +130,7 @@
     <a href="calendar.html" id="calendar">Calendar</a>
     <a href="profile.html" id="todo">User Profile</a>
     <a href="feedback.html" id="feedback">Feedback</a>
+  <a href="todolist.html" id="list">Activities List</a>
   </div>
     <div class="modal" id="modal">
       <div class="modal-header">
@@ -160,35 +152,6 @@
     <div id="overlay"></div>
     <div>
         <img id="wheel" src="css/images/wheel.gif"> 
-    </div>
-    <div id="todolist">
-        <form>
-            <fieldset class="todo-list">
-              <legend class="todo-list__title">My Activities List</legend>
-              <div class="todoform">
-              <label class="todo-list__label">
-                <input type="checkbox" name="item1" id="item1" />
-                <i class="check"></i>
-                <span>Work on CST Project</span>
-              </label>
-              <label class="todo-list__label">
-                <input type="checkbox" name="item2" id="item2" />
-                <i class="check"></i>
-                <span>Watch CST Lectures</span>
-              </label>
-              <label class="todo-list__label">
-                <input type="checkbox" name="item3" id="item3" />
-                <i class="check"></i>
-                <span>Cook Dinner</span>
-              </label>
-              <label class="todo-list__label">
-                <input type="checkbox" name="item4" id="item4" />
-                <i class="check"></i>
-                <span>Code All Night</span>
-              </label>
-            </div>
-            </fieldset>
-          </form> 
     </div>
         <button id="spinButton" onclick="goToWheel()" class="spin">+ Spin</button>
 
