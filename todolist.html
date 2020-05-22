@@ -40,6 +40,7 @@
 		</div>
 		
 		<div>
+    <button type="submit" id="theList" onclick="goToWheel()">Back</button>
     <button type="submit" id="remove" onclick="removeActivities()"> Clear list </button>
     </div>
     <button onclick="goBack()">Go Back</button>
@@ -93,7 +94,9 @@
 			}
 			addlist();
 			
-
+            function goToWheel() {
+  window.location.replace("wheel.html");
+}
 		</script>
 
 </body>

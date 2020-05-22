@@ -100,4 +100,10 @@ svg {
      right: -10px;
      top: 750px; 
 }
+  @media (max-width: 595px) {
+    #theList {
+      float: left; 
+      margin-top: 500px; 
+    }
+  }
   }
