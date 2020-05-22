@@ -32,3 +32,7 @@ function removeActivities(){
         })
     });
 }
+
+function goBack() {
+    window.location.replace("redirect_mainpage.html");
+  }

@@ -30,18 +30,19 @@
 
     <h1>My Activities List</h1>
 		<div>
-			<h2 id="userN">User: </h2>
+			<h2 id="userN">U s e r : </h2>
 		</div>
 		
 		<div id="list">
-			<h3>Activities:</h3>
+			<h3>A c t i v i t i e s : </h3>
 			<ul id="myList">
 			</ul>
 		</div>
 		
 		<div>
     <button type="submit" id="remove" onclick="removeActivities()"> Clear list </button>
-		</div>
+    </div>
+    <button onclick="goBack()">Go Back</button>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -78,12 +79,17 @@
 			console.log(sub.length);
 			
 			function addlist() {
-				for(let i = 0; i < sub.length;i++){
+        if (landed == "undefined") {
+          console.log("no items found!");
+          document.getElementById("myList").innerHTML = "no items found!";
+        } else {
+          for(let i = 0; i < sub.length;i++){
 					var node = document.createElement("LI");
-					var textnode = document.createTextNode(sub[i]);
+          var textnode = document.createTextNode(sub[i]);
 					node.appendChild(textnode);
 					document.getElementById("myList").appendChild(node);
 				}
+        }
 			}
 			addlist();
 			
