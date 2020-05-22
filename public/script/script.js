@@ -83,5 +83,5 @@ var inputItem = document.getElementById("item").value;
 }
 
 
-
+//originally for chatbox, however feature did not work in hosting phase and was scrapped.
 

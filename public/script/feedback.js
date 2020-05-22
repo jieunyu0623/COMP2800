@@ -1,3 +1,4 @@
+//adds a feedback to database comments preserved with users id and the time of feedback.
 function addFeedback() {
   firebase.auth().onAuthStateChanged(function (user) {
     document.getElementById("feedbacksubmit").addEventListener("click", function(e) {
