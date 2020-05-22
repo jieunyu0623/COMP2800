@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Spin the Wheel</title>
+   
+    <meta name="author" content="Team26">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
+ 
+</head>
+<body>
+
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+<a href="redirect_mainpage.html" class="title"><h1>Project Spin The Wheel</h1></a>
+<button id="loginbutton" onclick="signOut()">Sign Out</button>
+<p id="afterlogin">Welcome back, <span id="getUserName">User</span></p> <!--user name after welcome back message-->
+<div id="mySidenav" class="sidenav">
+    <a data-modal-target="#modal" id="about">About</a>
+    <a href="calendar.html" id="calendar">Calendar</a>
+    <a href="profile.html" id="todo">User Profile</a>
+    <a href="todolist.html" id="thelist">To Do List</a>
+    <a href="feedback.html" id="feedback">Feedback</a>
+  </div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">A b o u t  U s . . .</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+       <div class="modal-body">
+        W e  a r e  T e a m  2 6 :) <br> <br>
+        C h r i s t o p h e r  Z h a n g
+        <img src = "css/images/snorlax.jpg" alt = "no image chris" style = "width:40px; height:40px;"> <br><br>
+        S i m r a n  G a n d h i
+        <img src = "css/images/sim.jpg" alt = "no image sim" style = "width:40px; height:40px;"> <br><br>
+        J i e u n  Y u
+        <img src = "css/images/houhou.gif" alt = "no image mary" style = "width:40px; height:40px;"> <br> <br>
+        A n m o l 
+        <img src = "css/images/anmol.jpg" alt = "no image anmol" style = "width:40px; height:40px;"> <br> <br>
+      </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <div>
+        <img id="wheel" src="css/images/wheel.gif"> 
+    </div>
+    <div id="todolist">
+        <form>
+            <fieldset class="todo-list">
+              <legend class="todo-list__title">My Special Todo List</legend>
+              <div class="todoform">
+              <label class="todo-list__label">
+                <input type="checkbox" name="item1" id="item1" />
+                <i class="check"></i>
+                <span>Work on CST Project</span>
+              </label>
+              <label class="todo-list__label">
+                <input type="checkbox" name="item2" id="item2" />
+                <i class="check"></i>
+                <span>Watch CST Lectures</span>
+              </label>
+              <label class="todo-list__label">
+                <input type="checkbox" name="item3" id="item3" />
+                <i class="check"></i>
+                <span>Cook Dinner</span>
+              </label>
+              <label class="todo-list__label">
+                <input type="checkbox" name="item4" id="item4" />
+                <i class="check"></i>
+                <span>Code All Night</span>
+              </label>
+            </div>
+            </fieldset>
+          </form> 
+    </div>
+    <a href = "wheel.html" alt = "wheel not shown">
+        <button id="spinButton" class="spin">+ Spin</button>
+    </a>
+
+<button class="sharer"
+        data-sharer="facebook" 
+        data-url="https://comp2800-164b5.web.app/">
+        Share on Facebook
+</button>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</body>
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    
+    
+
+  
+  
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="firebase_api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+    <script type="text/javascript" defer src="script/mainpage.js"></script>
+
+
+     <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+
+</html>                       

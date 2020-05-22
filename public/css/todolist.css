@@ -1,0 +1,95 @@
+   body {
+background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('images/blue_checkered_table.jpg'); 
+}
+
+h1 {
+    display:inline-block;
+    text-decoration: none;
+    padding: 15px;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+        2px 2px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+  font-size: 40pt;
+  padding: 20px; 
+}
+
+h1:hover {
+    text-decoration: none;
+    -webkit-text-stroke: 1px black;
+    color: #76B9F6;
+    text-shadow:
+        2px 2px 0 black,
+      -1px -1px 0 black,  
+       1px -1px 0 black,
+       -1px 1px 0 black,
+        1px 1px 0 black;
+} 
+
+h3 {
+  font-weight: 700;
+    font: 400 100px/1.0 'Just Another Hand', Helvetica, sans-serif;
+    color: #76B9F6;
+    text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px #3c3c3c, 0px 9px 0px #2b2b2b, 3px 8px 15px rgba(0,0,0,0.1), 3px 8px 5px rgba(0,0,0,0.3);
+  padding: 3px 6px;
+    color: #84A7EA;
+    text-shadow:
+    2px 2px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 30pt; 
+}
+
+button {
+  border-radius: 10px; 
+  margin-top: 15px; 
+  margin-left: 25px;
+}
+#list {
+  background-color: #b8baba;
+  margin-left: 30px;
+  margin-top: 40px; 
+  border-radius: 10px; 
+  width: 600px; 
+  padding: 10px; 
+  color: white; 
+  text-shadow:
+    2px 2px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 50px;
+}
+
+#userN {
+  font-weight: 700;
+    font: 400 100px/1.0 'Just Another Hand', Helvetica, sans-serif;
+    color: #76B9F6;
+    text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px #3c3c3c, 0px 9px 0px #2b2b2b, 3px 8px 15px rgba(0,0,0,0.1), 3px 8px 5px rgba(0,0,0,0.3);
+  padding: 3px 6px;
+    color: #84A7EA;
+    text-shadow:
+    1px 1px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 20pt; 
+  margin-left: 20px; 
+}
+ @media (max-width: 375px) {
+   #list {
+     width: 330px; 
+   }
+
+
+}
