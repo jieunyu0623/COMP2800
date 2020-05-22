@@ -9,7 +9,7 @@
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
     <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
@@ -23,6 +23,7 @@
    <link rel="stylesheet" type="text/css" href="wheel.css">
   <meta charset="utf-8">
     <title>Wheel of Fortune Bingo</title>
+	
 
 </head>
 <body>
@@ -40,9 +41,10 @@
 		<input type = "text" id="remove">
     <button type = "submit" id = "delete" onclick="removeActivities()"> remove </button>
 		</div>
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	
     <div id="chart"></div>
-    <button type="submit" id="theList" onclick="goToList()"> My Activities List</button>
+    
 
 
     <!----------------------------------------------->
@@ -61,7 +63,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-        <script src = "scripts/firebase_api.js"></script>
+    <script src = "/scripts/firebase_api.js"></script>
 		<script src = "scripts.js"></script>
 		
 
@@ -69,12 +71,9 @@
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-  	
-  <script>  
+  	<script>  
 
-			function goToList() {
-  window.location.replace("todolist.html");
-}
+			
 		</script>
 		    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -171,8 +170,23 @@
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path")
                         .attr("fill", "#111");
                     //populate question
-                    d3.select("#question h1")
-                        .text(data[picked].question);
+                    d3.select("#label")
+                        .text(data[picked]);
+										console.log(picked);
+										console.log(sub[picked]);
+										landedItem();
+										function landedItem(){
+        								firebase.auth().onAuthStateChanged(function (user) {
+        								db.collection("Users").doc(user.uid)
+        								.update({
+        								   
+        								    landed: firebase.firestore.FieldValue.arrayUnion(sub[picked])
+													
+        								})
+				
+										});
+}
+
                     oldrotation = rotation;
                 
                     container.on("click", spin);
@@ -222,5 +236,6 @@
             return array;
         }
     </script>
+
 </body>
 </html>                       
