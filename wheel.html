@@ -36,10 +36,10 @@
 		<div id= adding>
            <p id="p1"> Add an activity! </p>
 		<input type = "text" id="item">
-    <button type = "submit" id = "submit" onclick="addActivities()"> Add </button>
-          <p id="p2"> Delete an activity! </p>
+    <button type = "submit" id = "submit" onclick="addActivities()"  onclick="document.getElementById('item').value = ''"> Add </button>
+    <p id="p2"> Delete an activity! </p>
 		<input type = "text" id="remove">
-    <button type = "submit" id = "delete" onclick="removeActivities()"> remove </button>
+    <button type = "submit" id = "delete" onclick="removeActivities()" onclick="document.getElementById('remove').value = ''"> remove </button>
 		</div>
 		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	
