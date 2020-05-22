@@ -1,7 +1,8 @@
+/*background*/
 body {
     background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('images/blue_checkered_table.jpg'); 
 }
-
+/*title*/
 .title {
     display:inline-block;
     text-decoration: none;
@@ -38,7 +39,7 @@ body {
     --vanilla-calendar-selected-color: #fff;
     --vanilla-calendar-selected-radius: 5px;
 }
-
+/*calendar*/
 .vanilla-calendar *, .vanilla-calendar *:before, .vanilla-calendar *:after {
     box-sizing: border-box;
 }
@@ -151,6 +152,7 @@ body {
     cursor: not-allowed;
     opacity: 0.2;
 }
+/*back button*/
 button {
   border-radius: 10px; 
 }

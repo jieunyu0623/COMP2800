@@ -6,3 +6,9 @@ dev
 
 This is the todolist. Only todolist is to be worked on here.
 todolist
+
+Files that were for the chat box but weren't used:
+chatbox.html
+chatbox.css
+chat_script.js
+server.js

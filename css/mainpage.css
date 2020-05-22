@@ -1,7 +1,8 @@
+/*background*/
 body {
     background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('images/blue_checkered_table.jpg'); 
 }
-  
+/*title*/
 .title {
     display:inline-block;
     text-decoration: none;
@@ -27,7 +28,7 @@ body {
        -1px 1px 0 black,
         1px 1px 0 black;
 } 
-
+/*sidenav bar*/
 #mySidenav a {
     margin: 120px 0px 0px 0px;
     position: absolute;
@@ -123,7 +124,7 @@ body {
   *, *::after, *::before {
     box-sizing: border-box;
   }
-  
+/*about us page*/
   .modal {
     position: fixed;
     top: 50%;
@@ -188,7 +189,7 @@ body {
     opacity: 1;
     pointer-events: all;
   }
-
+/*login button*/
   #loginbutton {
     background-color: #ffb0b0;
     border-radius: 5px;
@@ -204,7 +205,7 @@ body {
   #loginbutton:hover {
     background-color: #ffd8d8;
   }
-
+/*spinning wheel*/
   #wheel {
     position: absolute;
     margin-left: 500px;
@@ -220,7 +221,7 @@ body {
     background-color: #30bf30;
 
   }
-
+/*spin button*/
   #spinButton {
     font-weight: 700;
     font-size: 20px;
@@ -252,7 +253,7 @@ body {
     height: 300px;
     display: inline-block;
 }
-
+/*login and logout button*/
 .button{
     color: #fff;
     background-color: #3fb2bf;
@@ -277,7 +278,7 @@ body {
   display: flex;
   display: none;
 }
-
+/*welcome message*/
 #afterlogin {
   margin-right: 20px;
   display: inline-block;
@@ -286,10 +287,11 @@ body {
   font-weight: bold;
   font-size: 15pt;
 }
+/*title*/
 h1 {
   font-size: 70px; 
 }
-
+/*facebook button*/
 .sharer {
      font-weight: 700;
     font-size: 15px;

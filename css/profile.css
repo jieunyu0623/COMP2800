@@ -1,7 +1,8 @@
+/*background*/
 body {
     background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3)), url('images/blue_checkered_table.jpg'); 
 }
-
+/*title*/
 h1 {
     font-size: 50px;
     margin-left: 20px; 
@@ -18,7 +19,7 @@ h1 {
 h1:hover {
     color: #76B9F6;
 }
-
+/*submit*/
 button {
     margin-left: 20px;
     border-color: #84A7EA;
@@ -39,7 +40,7 @@ button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
+/*textboxes to submit info*/
 p {
     margin-left: 20px; 
     font-weight: bold;

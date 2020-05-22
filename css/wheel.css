@@ -1,7 +1,8 @@
+/*background*/
 body {
 background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('images/blue_checkered_table.jpg'); 
 }
-
+/*title*/
 h1 {
     display:inline-block;
     text-decoration: none;
@@ -29,34 +30,38 @@ h1:hover {
        -1px 1px 0 black,
         1px 1px 0 black;
 } 
-
+/*div where textboxes are held*/
 #item {
 border-radius: 10px; 
 border: 1px solid grey; 
 }
-
+/*submit button*/
 #submit {
   border-radius: 10px; 
 }
-
+/*adding textbox*/
 #adding {
   background-color: #b8baba; 
   height: 240px; 
   width: 320px; 
   border-radius: 10px;
 }
+/*remove textbox*/
 #remove {
 border-radius: 10px; 
 border: 1px solid grey; 
 }
+/*delete button*/
 #delete {
   border-radius: 10px; 
 }
+/*textboxes and buttons*/
 #submit, #item, #remove, #delete {
   margin-top: 5px;
   margin-left: 5px; 
   
 }
+/*titles */
 #p1, #p2 {
  font-weight: 700;
     font: 400 30px/1.0 'Just Another Hand', Helvetica, sans-serif;
@@ -72,22 +77,23 @@ padding-top: 15px;
 padding-left: 15px; 
   margin-left: 15px; 
 }
-
+/*wheel*/
 svg {
   margin-left: 570px;
   margin-top: -300px; 
   
 }
-	#adding{
-				margin: 20px;
-			}
-			#chart{
-				padding-top: 100px;
-			}
+#adding{
+  margin: 20px;
+}
+#chart{
+  padding-top: 100px;
+}
 #theList {
   border-radius: 10px; 
   margin-left: 10px 
 }
+/*media queries*/
 @media (min-width: 770px) and (max-width: 1024px) {
   svg {
     margin-left: 300px; 

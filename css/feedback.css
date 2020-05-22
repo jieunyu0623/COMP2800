@@ -1,7 +1,8 @@
+/*background*/
 body {
     background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('images/blue_checkered_table.jpg'); 
 }
-
+/*title*/
 #title {
    font-size: 50px;
     margin-left: 20px; 
@@ -18,6 +19,7 @@ body {
     color: #76B9F6;
 }
 
+/*textbox*/
 #feedbackdescription {
   margin-top: 30px;
    margin-left: 20px;
@@ -38,6 +40,7 @@ textarea::-webkit-scrollbar-thumb {
     background-color: #76B9F6;
 }
 
+/*submit button*/
 #feedbacksubmit{
     margin-left: 20px;
     border-color: #84A7EA;
@@ -57,6 +60,7 @@ textarea::-webkit-scrollbar-thumb {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+/*back button*/
 #back {
   border-radius: 10px;
 }

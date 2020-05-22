@@ -28,10 +28,13 @@
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-    <div class="content">
+<!--  Calendar API-->
+  <div class="content">
         <h1 class="title">C a l e n d a r</h1>
         <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
     </div>
+
+  <!--  button to go back to mainapge-->
 <button onclick="goBack()">Go Back</button>
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -58,7 +61,9 @@
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-    <script>           
+    
+  <script>    
+   //upload calendar onto the selected element  
             let calendar = new VanillaCalendar({
                 selector: "#myCalendar",
                 onSelect: (data, elem) => {
