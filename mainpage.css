@@ -228,7 +228,7 @@ body {
     padding: 0 75px 10px 30px;
     border: transparent;
     color: black;
-    margin-bottom 30px; 
+    margin-bottom: 30px; 
     margin-left: -140px; 
   }
   .todo-list .todo-list__title {
@@ -393,4 +393,7 @@ h1 {
      font-weight: 700;
     font-size: 15px;
     margin-top: 600px; 
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
 }

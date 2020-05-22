@@ -4,46 +4,34 @@
     <meta charset="utf-8">
     <title>Spin the Wheel</title>
    
-    <meta name="author" content="BCIT">
+    <meta name="author" content="Team 26">
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
     <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
     <!----------------------------------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-
    
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-   <link rel="stylesheet" type="text/css" href="todolist.css">
+    <link rel="stylesheet" href="calendar.css">
+
+ 
 </head>
 <body>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-
-    <h1>My Activities List</h1>
-		<div>
-			<h2 id="userN">U s e r : </h2>
-		</div>
-		
-		<div id="list">
-			<h3>A c t i v i t i e s : </h3>
-			<ul id="myList">
-			</ul>
-		</div>
-		
-		<div>
-    <button type="submit" id="theList" onclick="goToWheel()">Back</button>
-    <button type="submit" id="remove" onclick="removeActivities()"> Clear list </button>
+    <div class="content">
+        <h1 class="title">C a l e n d a r</h1>
+        <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
     </div>
-    <button onclick="goBack()">Go Back</button>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -56,48 +44,27 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts/firebase_api.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-		<script src = "scripts/firebase_api.js"></script>
-		<script src = "list.js"></script>
-
+    <script src="calendar.js"></script>
 
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-		<script>
-			var landed= localStorage.getItem("landed");
-			console.log(landed);
-			var name= localStorage.getItem("name");
-			console.log(name);
-			
-			document.getElementById("userN").append(name);
-			
-			var sub = landed.split(",");
-			console.log(sub.length);
-			
-			function addlist() {
-        if (landed == "undefined") {
-          console.log("no items found!");
-          document.getElementById("myList").innerHTML = "no items found!";
-        } else {
-          for(let i = 0; i < sub.length;i++){
-					var node = document.createElement("LI");
-          var textnode = document.createTextNode(sub[i]);
-					node.appendChild(textnode);
-					document.getElementById("myList").appendChild(node);
-				}
-        }
-			}
-			addlist();
-			
-            function goToWheel() {
-  window.location.replace("wheel.html");
-}
-		</script>
-
+    <script>           
+            let calendar = new VanillaCalendar({
+                selector: "#myCalendar",
+                onSelect: (data, elem) => {
+                    console.log(data, elem)
+                }
+            })
+    </script>
 </body>
 </html>                       
